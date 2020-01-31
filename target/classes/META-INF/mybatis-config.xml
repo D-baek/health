@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC  "-//mybatis.org//DTD Config 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+       <setting  name="mapUnderscoreToCamelCase"  value="true"/>
+    </settings>
+    <typeAliases>
+    	<typeAlias alias="User"  type="com.health.web.user.User"/>
+		<typeAlias alias="Post"  type="com.health.web.post.Post"/>
+		<typeAlias alias="Likes"  type="com.health.web.post.Likes"/>
+		<typeAlias alias="Profile"  type="com.health.web.post.Profile"/>
+		<typeAlias alias="Center"  type="com.health.web.center.Center"/>
+		<typeAlias alias="Routine"  type="com.health.web.routine.Routine"/>
+		<typeAlias alias="Food"  type="com.health.web.food.Food"/>
+    </typeAliases>
+</configuration>
