@@ -41,4 +41,9 @@
     	SELECT * FROM USERS
     	WHERE USERID LIKE #{userid}
    	</select>
+   	<!-- 더미값 넣기 -->
+   	<insert  id="insertDummy" parameterType="User">
+		INSERT INTO USERS(USERID,PASSWD,UNAME,AGE,GENDER,HEIGHT,WEIGHT,FAT,MUSCLE,CAREER,DIVISION)
+		VALUES(#{userid},#{passwd},#{uname},#{age},#{gender},#{height},#{weight},#{fat},#{muscle},#{career},#{division})
+	</insert>
 </mapper>

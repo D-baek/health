@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.health.web.pxy.CrawlingProxy;
 import com.health.web.pxy.Trunk;
+import com.health.web.user.UserProxy;
 import com.health.web.util.Printer;
 
 @RestController
@@ -19,11 +20,20 @@ public class TxController {
 	@Autowired TxService txService;
 	@Autowired Trunk<Object> trunk; @Autowired Printer printer;
 	
+	
 	@GetMapping("/crawling/center")
 	public Map<?,?> centerCrawling(){
 		printer.accept("헬스센터 크롤링 진입");
 		txService.centerCrawling();
 		trunk.clear();
+		trunk.put("msg", "success");
+		return trunk.get();
+	}
+	@GetMapping("/")
+	public Map<?,?> insertDummy(){
+		printer.accept("더미값 넣기");
+		UserProxy userProxy = new UserProxy();
+		txService.insertUser(userProxy.makerUser());
 		trunk.put("msg", "success");
 		return trunk.get();
 	}

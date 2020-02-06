@@ -14,6 +14,8 @@ public interface UserMapper {
 	public void createCenter(HashMap<String, String> paramMap);
 	public void insetMap(Center param);
 	public void makeRoutine(User param);
+	public void insertCalendar(String userid);
 	public User selectUpdatedUser(User param);
 	public User infoUserByUserNo(int userno);
+	public void insertDummy(User param);
  }

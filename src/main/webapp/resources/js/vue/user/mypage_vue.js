@@ -9,13 +9,11 @@ mypage_vue ={
 	<div class="row">
 	<div class="col-lg-4">
 	<div class="our-team-main">
-	
 	<div class="team-front">
 	<img class="img-fluid1" />
 	<h3>회원정보 수정</h3>
 	<p>Modifying member information</p>
 	</div>
-	
 	<div class="team-back">
 	<a href="#" class ="myModify">
 		<span>
@@ -28,17 +26,14 @@ mypage_vue ={
 	</div>
 	</div>
 	</div>
-	
 	<!--team-2-->
 	<div class="col-lg-4">
 	<div class="our-team-main">
-	
 	<div class="team-front">
 	<img class="img-fluid2" />
 	<h3>회원 그래프 보기</h3>
 	<p>View Member Graphs</p>
 	</div>
-	
 	<div class="team-back">
 	<a href="#" class="myChart">
 		<span>
@@ -49,17 +44,14 @@ mypage_vue ={
 		</span>
 	</a>
 </div></div></div>
-	
 	<!--team-3-->
 	<div class="col-lg-4">
 	<div class="our-team-main">
-	
 	<div class="team-front">
 	<img class="img-fluid3" />
 	<h3>내 루틴 보러가기</h3>
 	<p>Check my routine</p>
 	</div>
-	
 	<div class="team-back">
 	<a href="#" class="myRoutine">
 		<span>
@@ -72,11 +64,9 @@ mypage_vue ={
 	</div>
 	</div>
 	</div>
-	
 	<!--team-4-->
 	<div class="col-lg-4">
 	<div class="our-team-main">
-	
 	<div class="team-front">
 	<img class="img-fluid4" />
 	<h3>내가 작성한 헬그램 보러가기</h3>
@@ -94,54 +84,42 @@ mypage_vue ={
 	</div>
 	</div>
 	</div>
-	
 	<!--team-5-->
 	<div class="col-lg-4">
 	<div class="our-team-main">
-	
 	<div class="team-front">
 	<img class="img-fluid5" />
 	<h3>식단 관리</h3>
-	<p>Diet management</p>
+	<p>protein calculation and ingestion</p>
 	</div>
-	
 	<div class="team-back">
 	<a href="#" class="myProtein">
 		<span>
 		<br />
 		몸 스펙에 맞춰 계산 된<br />
-		단백질 수치에 맞는<br />
-		맛있는 음식 레시피를 참고하여<br />
+		충분한 단백질 섭취로<br />
 		근손실 걱정은 손저어어얼!!
 		</span>
 	</a>
 	</div>
-	
 	</div>
 	</div>
-	
 	<!--team-6-->
 	<div class="col-lg-4">
 	<div class="our-team-main">
-	
 	<div class="team-front">
-	<img class="img-fluid6" />
-	<h3>헬스 백과사전</h3>
-	<p>Encyclopedia of Health</p>
+	<img src="http://placehold.it/110x110/2196f3/fff?text=Dilip" class="img-fluid" />
+	<h3>Dilip Kevat</h3>
+	<p>Web Designer</p>
 	</div>
-	
 	<div class="team-back">
-	<a href="#" class="myDictionary">
-		<span>
-		<br/>
-		부위 별 운동방법과<br />
-		자극 위치를 파악하여<br />
-		한 번의 움직임에<br />
-		최고의 효과를!!!
-		</span>
-	</a>
+	<span>
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+	natoque penatibus et magnis dis parturient montes,
+	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+	natoque.
+	</span>
 	</div>
-
 	</div>
 	</div>
 	<!--team-6-->
@@ -190,64 +168,23 @@ mypage_vue ={
 	mypage_chart: x=>{
 		return `
 		<link rel="stylesheet" href="${x}/mypageChart.css"/>
-		<div class="chartMain">
+
+		<div class="chartUp">
 			<div class="chart1">
 				<canvas id="myChart1"></canvas>
 			</div>
 			<div class="chart2">
-				<div id="chart-container"></div>
+				<canvas id="myChart2"></canvas>
 			</div>
-			<div class="chart3">
-			  <div class="main">
-					<div class="content-wrap">
-					<div class="content-left">
-						<div class="main-wrap">
-						<div id="main-day" class="main-day"></div>
-						<div id="main-date" class="main-date"></div>
-						</div>
-						<div class="todo-wrap">
-						<div class="todo-title">Todo List</div>
-						<div class="input-wrap">
-							<input type="text" placeholder="please write here!!" id="input-box" class="input-box">
-							<button type="button" id="input-data" class="input-data">INPUT</button>
-							<div id="input-list" class="input-list"></div>
-						</div>
-						</div>
-					</div>
-					<div class="content-right">
-						<table id="calendar" align="center">
-						<thead>
-							<tr class="btn-wrap clearfix">
-							<td>
-								<label id="prev">
-									&#60;
-								</label>
-							</td>
-							<td align="center" id="current-year-month" colspan="5"></td>
-							<td>
-								<label id="next">
-									&#62;
-								</label>
-							</td>
-							</tr>
-							<tr>
-								<td class = "sun" align="center">Sun</td>
-								<td align="center">Mon</td>
-								<td align="center">Tue</td>
-								<td align="center">Wed</td>
-								<td align="center">Thu</td>
-								<td align="center">Fri</td>
-								<td class= "sat" align="center">Sat</td>
-							</tr>
-						</thead>
-						<tbody id="calendar-body" class="calendar-body"></tbody>
-						</table>
-					</div>
-					</div>
-				</div>
+			 <div class="container calendar-container">
+				<div id="calendar" style="max-width:900px; margin:40px auto;"></div>
 			</div>
-			<div class="chart4">
-				<canvas id="myChart4"></canvas>
+		</div>
+		<div class="chartDown">
+			<div class="chart3"></div>
+			<div class="chart4"></div>
+			<div class="chart5">
+				<canvas id="myChart5"></canvas>
 			</div>
 		</div>`
 	}

@@ -1,12 +1,12 @@
 package com.health.web.user;
-import java.util.Arrays;
+import java.awt.Point;
 import java.util.HashMap;
 import java.util.Map;
-
 import java.util.function.Consumer;
 import java.util.function.Function;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,7 +28,6 @@ public class UserController {
 	@Autowired Trunk<Object> trunk; @Autowired Box<Object> box; @Autowired CrawlingProxy crawler;
    
 	
-	
 	@PostMapping("/join")
 	public Map<?,?> signUp(@RequestBody User param) {
 		print.accept("회원가입 진입");
@@ -37,7 +36,6 @@ public class UserController {
 		consumer.accept(param);
 		trunk.put("msg", "success");
 		return trunk.get();
-		
 	}
 	@PostMapping("/login")
 	public Map<?, ?> signIn(@RequestBody User param){
@@ -60,7 +58,7 @@ public class UserController {
 		trunk.clear();
 		trunk.put("msg", (function.apply(userid) !=0) ? "Y" : "N");
 		return trunk.get();
-	}
+	}	
 	@GetMapping("/create/center")
 	public Map<?, ?> makeTable(){
 		HashMap<String, String> paramMap = new HashMap<>();

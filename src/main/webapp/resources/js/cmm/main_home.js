@@ -30,7 +30,7 @@ main_home = (() => {
 	}
 	let setContentView = () => {
 		$('#wrapper').html(navi_vue.toolbar_sub())
-		.append(`<div id="mainpage" class="content"></div>`)
+		.append(`<div id="mainpage" class="content" style=""></div>`)
 		.append(footer.foot())
 		$('#mainpage').append(main.main_vue({ img: img }))
 		$('<a/>',{text : '로그인', id: 'a_login'})
@@ -38,41 +38,7 @@ main_home = (() => {
 		.click(e => {
 			e.preventDefault()
 			auth.onCreate()
-		})
+           })
 	}
-			/*	$.each([ 잠시 주석
-			{ text: '회원가입', id: 'join' },
-			{ text: '로그인', id: 'login' },
-			{ text: 'Mypage', id: 'mypage' },
-			{ text: '루틴프로그램', id: 'routine' },
-			{ text: '헬스타그램', id: 'article' },
-			{ text: '트레이너/센터 찾기', id: 'center' }], (i, j) => {
-				$('<li class="nav-item"><a id="' + j.id + '" class="nav-link js-scroll-trigger" href="#">' + j.text + '</a></li>')
-					.appendTo('#navbarResponsive ul[class="navbar-nav ml-auto"]')
-			})*/
-	
-			
-			/*let navi_move =()=> { 잠시 주석
-				$('#join').click(e=>{
-					e.preventDefault()
-					join.onCreate()
-				})
-				$('#login').click(e => {
-					e.preventDefault()
-					auth.onCreate()
-				})
-				$('#mypage').click(() =>{ mypage.onCreate() })
-				$('#routine').click(function(){ 
-					routine.onCreate()
-				 })
-				$('#article').click(function(){
-					brd.onCreate()
-				})
-				$('#center').click(() => { 
-					alert('센터')
-					center.onCreate()
-				})
-			}*/
 	return { onCreate }
-})()
-
+})();

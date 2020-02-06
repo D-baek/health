@@ -90,7 +90,6 @@ auth = (()=>{
 	let navi_move =()=>{
 		$('#mypage').click(e=>{
 			e.preventDefault()
-			alert('마이페이지 클릭')
 			mypage.onCreate()
 		})
 		$('#routine').click(e=>{
