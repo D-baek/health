@@ -71,10 +71,10 @@
 }
 .my-calendar .clicked-date {
   border-radius: 25px;
-  margin-top: 30px;
+  margin-top: 10px;
   float: left;
   width: 300px;
-  padding: 10px 0 26px;
+  padding: 10px 0 0 0;
   margin-left: 20px;
   background: #ddd;
 }
@@ -87,7 +87,13 @@
   padding-bottom: 20px;
   float: right;
 }
-
+.cal-todo:not(.clicked-date){
+  width: 300px;
+  height: 340px;
+  border-radius: 25px;
+  background: #ffcc33;
+  font-size: 24px;
+}
 .clicked-date .cal-day {
   font-size: 24px;
 }

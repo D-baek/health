@@ -168,7 +168,6 @@ mypage_vue ={
 	mypage_chart: x=>{
 		return `
 		<link rel="stylesheet" href="${x}/mypageChart.css"/>
-
 		<div class="chartUp">
 			<div class="chart1">
 				<canvas id="myChart1"></canvas>
@@ -184,14 +183,14 @@ mypage_vue ={
 					<div class="clicked-date">
 					<div class="cal-day"></div>
 					<div class="cal-date"></div>
+					<div class="cal-todo">----------------------</div>
+				</div>
 					<div class="calendar-box">
 					<div class="ctr-box clearfix">
-						<button type="button" title="prev" class="btn-cal prev">
-						</button>
+						<button type="button" title="prev" class="btn-cal prev"></button>
 						<span class="cal-month"></span>
 						<span class="cal-year"></span>
-						<button type="button" title="next" class="btn-cal next">
-						</button>
+						<button type="button" title="next" class="btn-cal next"></button>
 					</div>
 					<table class="cal-table">
 						<thead>
@@ -210,12 +209,10 @@ mypage_vue ={
 					</div>
 				</div>
 				<!-- // .my-calendar -->
-				</div>
+			</div>
 				<div class="chart5">
 					<canvas id="myChart5"></canvas>
-				</div>
 			</div>
-
 		</div>`
 	}
 }
