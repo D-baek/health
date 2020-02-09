@@ -91,8 +91,19 @@
   width: 300px;
   height: 340px;
   border-radius: 25px;
-  background: #ffcc33;
-  font-size: 24px;
+  background: #000000;
+  font-size: 16px;
+  color: #ffcc33;
+}
+.cal-todo > div{
+  font-size: 10px;
+  width: 60%;
+  float: left;
+  color: #ddaf35;
+}
+.cal-todo > .checked{
+  color: #FFFFFF;
+  text-decoration:line-through
 }
 .clicked-date .cal-day {
   font-size: 24px;
@@ -100,7 +111,11 @@
 .clicked-date .cal-date {
   font-size: 130px;
 }
-
+.check-btn{
+  width: 200px;
+  height : 60px;
+  font-weight: bold;
+}
 .ctr-box {
   padding: 0 16px;
   margin-bottom: 20px;

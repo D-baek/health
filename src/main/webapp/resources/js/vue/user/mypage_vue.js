@@ -183,7 +183,7 @@ mypage_vue ={
 					<div class="clicked-date">
 					<div class="cal-day"></div>
 					<div class="cal-date"></div>
-					<div class="cal-todo">----------------------</div>
+					<div class="cal-todo" id="cal-todo">----------Todo List----------</div>
 				</div>
 					<div class="calendar-box">
 					<div class="ctr-box clearfix">
@@ -206,6 +206,7 @@ mypage_vue ={
 						</thead>
 						<tbody class="cal-body"></tbody>
 					</table>
+					<button class="check-btn">출석 완료</button>
 					</div>
 				</div>
 				<!-- // .my-calendar -->
